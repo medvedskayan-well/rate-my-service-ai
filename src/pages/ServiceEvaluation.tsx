@@ -106,16 +106,18 @@ export const ServiceEvaluation = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <div className="container mx-auto px-4 pt-16 pb-8 max-w-4xl">
         {/* Header with language switcher */}
-        <div className="flex justify-between items-start mb-8">
-          <h1 className="text-3xl font-bold text-foreground max-w-3xl">
+        <div className="flex justify-between items-start mb-12 pt-8">
+          <h1 className="text-3xl font-bold text-foreground max-w-3xl leading-tight">
             {t.title}
           </h1>
-          <LanguageSwitcher 
-            currentLang={lang}
-            onLanguageChange={setLang}
-          />
+          <div className="flex-shrink-0 ml-4">
+            <LanguageSwitcher 
+              currentLang={lang}
+              onLanguageChange={setLang}
+            />
+          </div>
         </div>
 
         {/* Appeal Information */}
